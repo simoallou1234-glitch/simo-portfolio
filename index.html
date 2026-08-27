@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Simo Allou — Graphic Designer</title>
+    <meta name="description" content="Simo Allou — Graphic Designer specialized in Brand Identity, Packaging, Social Media and Visual Design.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #08080c;
+            --bg-soft: #101016;
+            --card: #12121a;
+            --text: #f5f5f7;
+            --muted: #92929f;
+            --purple: #9b5cff;
+            --purple-light: #c49aff;
+            --border: rgba(255,255,255,.09);
+            --max-width: 1240px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: "DM Sans", sans-serif;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: min(var(--max-width), calc(100% - 48px));
+            margin: auto;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            backdrop-filter: blur(20px);
+            background: rgba(8,8,12,.72);
+            border-bottom: 1px solid rgba(255,255,255,.05);
+        }
+
+        .nav-inner {
+            height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 0 24px;
+        }
+
+        .logo {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 23px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: var(--purple);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 34px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #aaaab4;
+            font-size: 14px;
+            transition: .3s;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        .nav-contact {
+            border: 1px solid var(--border);
+            padding: 11px 18px;
+            border-radius: 50px;
+            transition: .3s;
+        }
+
+        .nav-contact:hover {
+            border-color: var(--purple);
+            color: var(--purple) !important;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: var(--purple);
+            opacity: .13;
+            filter: blur(150px);
+            border-radius: 50%;
+            right: -150px;
+            top: 100px;
+        }
+
+        .hero-content {
+            padding-top: 100px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--purple-light);
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background: var(--purple);
+            border-radius: 50%;
+            box-shadow: 0 0 20px var(--purple);
+        }
+
+        .hero h1 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(60px, 9vw, 125px);
+            line-height: .9;
+            letter-spacing: -7px;
+            max-width: 1050px;
+        }
+
+        .hero h1 .outline {
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(255,255,255,.5);
+        }
+
+        .hero-description {
+            max-width: 590px;
+            margin-top: 38px;
+            color: var(--muted);
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            margin-top: 38px;
+        }
+
+        .btn {
+            padding: 15px 24px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .btn-primary {
+            background: var(--purple);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(155,92,255,.25);
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--border);
+            color: #ddd;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--purple);
+        }
+
+        .scroll {
+            position: absolute;
+            bottom: 35px;
+            left: 24px;
+            color: #666671;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* =========================
+           SECTION
+        ========================= */
+
+        section {
+            padding: 130px 0;
+        }
+
+        .section-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-bottom: 55px;
+        }
+
+        .section-number {
+            color: var(--purple);
+            font-size: 13px;
+            margin-bottom: 14px;
+        }
+
+        .section-title {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(40px, 6vw, 76px);
+            letter-spacing: -4px;
+            line-height: 1;
+        }
+
+        .section-description {
+            color: var(--muted);
+            max-width: 380px;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .project {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+            background: var(--card);
+            cursor: pointer;
+        }
+
+        .project-image {
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            height: 100%;
+            object-fit: cover;
+            transition: transform .7s cubic-bezier(.2,.7,.2,1);
+        }
+
+        .project:hover img {
+            transform: scale(1.05);
+        }
+
+        .project-info {
+            padding: 23px 3px 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .project-name {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 21px;
+        }
+
+        .project-category {
+            color: var(--muted);
+            font-size: 13px;
+            margin-top: 6px;
+        }
+
+        .project-arrow {
+            color: var(--purple);
+            font-size: 23px;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 100px;
+            align-items: center;
+        }
+
+        .about-photo {
+            background: linear-gradient(135deg, #17121f, #0c0c11);
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-photo::before {
+            content: "S";
+            position: absolute;
+            font-family: "Space Grotesk";
+            font-size: 400px;
+            font-weight: 700;
+            color: rgba(155,92,255,.08);
+            line-height: 1;
+        }
+
+        .about-photo-text {
+            position: relative;
+            z-index: 2;
+            font-family: "Space Grotesk";
+            font-size: 70px;
+            font-weight: 700;
+            color: var(--purple);
+        }
+
+        .about-text h3 {
+            font-family: "Space Grotesk";
+            font-size: 38px;
+            line-height: 1.2;
+            margin-bottom: 25px;
+        }
+
+        .about-text p {
+            color: var(--muted);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .stat {
+            border-top: 1px solid var(--border);
+            padding-top: 17px;
+        }
+
+        .stat strong {
+            font-family: "Space Grotesk";
+            font-size: 34px;
+        }
+
+        .stat span {
+            display: block;
+            color: var(--muted);
+            font-size: 12px;
+            margin-top: 4px;
+        }
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services {
+            border-top: 1px solid var(--border);
+        }
+
+        .service {
+            display: grid;
+            grid-template-columns: 80px 1fr 350px;
+            gap: 30px;
+            padding: 30px 0;
+            border-bottom: 1px solid var(--border);
+            align-items: center;
+            transition: .3s;
+        }
+
+        .service:hover {
+            padding-left: 15px;
+        }
+
+        .service-number {
+            color: var(--purple);
+            font-size: 13px;
+        }
+
+        .service h3 {
+            font-family: "Space Grotesk";
+            font-size: 30px;
+        }
+
+        .service p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           EXPERIENCE
+        ========================= */
+
+        .experience {
+            max-width: 950px;
+            margin-left: auto;
+        }
+
+        .experience-item {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 40px;
+            padding: 35px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .experience-date {
+            color: var(--purple);
+            font-size: 13px;
+        }
+
+        .experience h3 {
+            font-family: "Space Grotesk";
+            font-size: 27px;
+            margin-bottom: 8px;
+        }
+
+        .experience-company {
+            color: #aaa;
+            margin-bottom: 15px;
+        }
+
+        .experience p {
+            color: var(--muted);
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        /* =========================
+           TOOLS
+        ========================= */
+
+        .tools-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 40px;
+        }
+
+        .tool {
+            border: 1px solid var(--border);
+            padding: 14px 20px;
+            border-radius: 50px;
+            color: #ccc;
+            font-size: 14px;
+            transition: .3s;
+        }
+
+        .tool:hover {
+            border-color: var(--purple);
+            color: var(--purple-light);
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact::after {
+            content: "";
+            position: absolute;
+            width: 700px;
+            height: 700px;
+            background: var(--purple);
+            opacity: .1;
+            filter: blur(170px);
+            border-radius: 50%;
+            right: -200px;
+            bottom: -300px;
+        }
+
+        .contact h2 {
+            font-family: "Space Grotesk";
+            font-size: clamp(55px, 9vw, 120px);
+            line-height: .9;
+            letter-spacing: -6px;
+            max-width: 1000px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact h2 span {
+            color: var(--purple);
+        }
+
+        .contact-info {
+            margin-top: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .email {
+            font-family: "Space Grotesk";
+            font-size: 24px;
+            border-bottom: 1px solid var(--purple);
+            padding-bottom: 8px;
+        }
+
+        .socials {
+            display: flex;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .socials a {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .socials a:hover {
+            color: var(--purple);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 25px 0;
+            color: #666671;
+            font-size: 12px;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media(max-width: 800px) {
+
+            .container {
+                width: min(100% - 32px, var(--max-width));
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 62px;
+                letter-spacing: -4px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .section-top {
+                display: block;
+            }
+
+            .section-description {
+                margin-top: 25px;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .service {
+                grid-template-columns: 45px 1fr;
+            }
+
+            .service p {
+                grid-column: 2;
+            }
+
+            .experience-item {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .contact h2 {
+                font-size: 62px;
+                letter-spacing: -4px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+    <div class="nav-inner">
+
+        <a href="#" class="logo">
+            SIMO<span>.</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="#work">Work</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact" class="nav-contact">Let's Talk</a>
+        </div>
+
+    </div>
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero">
+
+    <div class="container hero-content">
+
+        <div class="eyebrow">
+            Graphic Designer · Morocco
+        </div>
+
+        <h1>
+            Visual ideas
+            <br>
+            <span class="outline">made</span> visible.
+        </h1>
+
+        <p class="hero-description">
+            I'm <strong>Simo Allou</strong>, a graphic designer focused on
+            building strong visual identities, memorable brands and
+            impactful digital experiences.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#work" class="btn btn-primary">
+                Explore my work
+            </a>
+
+            <a href="#contact" class="btn btn-secondary">
+                Get in touch
+            </a>
+        </div>
+
+    </div>
+
+    <div class="scroll">
+        Scroll to explore ↓
+    </div>
+
+</header>
+
+
+<!-- =========================
+     SELECTED WORK
+========================= -->
+
+<section id="work">
+
+    <div class="container">
+
+        <div class="section-top">
+
+            <div>
+                <div class="section-number">01 / SELECTED WORK</div>
+                <h2 class="section-title">Selected Work</h2>
+            </div>
+
+            <p class="section-description">
+                A selection of branding, packaging and visual communication
+                projects created for different brands and businesses.
+            </p>
+
+        </div>
+
+
+        <div class="projects">
+
+            <!-- PROJECT 1 -->
+
+            <a
+                class="project"
+                href="https://www.behance.net/gallery/236343725/Tiziri-Coffee-Moroccan-Specialty-Coffee-Brand-Identity"
+                target="_blank"
+            >
+
+                <div class="project-image">
+                    <img
+                        src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/placeholder.jpg"
+                        alt="Tiziri Coffee Brand Identity"
+                    >
+                </div>
+
+                <div class="project-info">
+
+                    <div>
+                        <div class="project-name">
+                            Tiziri Coffee
+                        </div>
+
+                        <div class="project-category">
+                            Brand Identity · Packaging
+                        </div>
+                    </div>
+
+                    <div class="project-arrow">↗</div>
+
+                </div>
+
+            </a>
+
+
+            <!-- PROJECT 2 -->
+
+            <a
+                class="project"
+                href="https://www.behance.net/gallery/234095455/Pati-Sweet-Cake-Pastry-Shop-Branding"
+                target="_blank"
+            >
+
+                <div class="project-image">
+                    <img
+                        src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/placeholder.jpg"
+                        alt="Pati Sweet Branding"
+                    >
+                </div>
+
+                <div class="project-info">
+
+                    <div>
+                        <div class="project-name">
+                            Pati Sweet
+                        </div>
+
+                        <div class="project-category">
+                            Branding · Packaging
+                        </div>
+                    </div>
+
+                    <div class="project-arrow">↗</div>
+
+                </div>
+
+            </a>
+
+
+            <!-- PROJECT 3 -->
+
+            <a
+                class="project"
+                href="https://www.behance.net/gallery/226783325/new-project-for-blio-cosmetic"
+                target="_blank"
+            >
+
+                <div class="project-image">
+                    <img
+                        src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/placeholder.jpg"
+                        alt="Blio Cosmetic"
+                    >
+                </div>
+
+                <div class="project-info">
+
+                    <div>
+                        <div class="project-name">
+                            Blio Cosmetic
+                        </div>
+
+                        <div class="project-category">
+                            Visual Identity · Cosmetics
+                        </div>
+                    </div>
+
+                    <div class="project-arrow">↗</div>
+
+                </div>
+
+            </a>
+
+
+            <!-- PROJECT 4 -->
+
+            <a
+                class="project"
+                href="https://www.behance.net/"
+                target="_blank"
+            >
+
+                <div class="project-image">
+                    <img
+                        src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/placeholder.jpg"
+                        alt="Graphic Design Project"
+                    >
+                </div>
+
+                <div class="project-info">
+
+                    <div>
+                        <div class="project-name">
+                            More Projects
+                        </div>
+
+                        <div class="project-category">
+                            Explore my Behance portfolio
+                        </div>
+                    </div>
+
+                    <div class="project-arrow">↗</div>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="about-photo">
+                <div class="about-photo-text">
+                    SA
+                </div>
+            </div>
+
+            <div class="about-text">
+
+                <div class="section-number">
+                    02 / ABOUT ME
+                </div>
+
+                <h3>
+                    Designing ideas into
+                    visual experiences.
+                </h3>
+
+                <p>
+                    I'm Simo Allou, a graphic designer specialized in
+                    visual communication, branding and digital design.
+                </p>
+
+                <p>
+                    My work combines strategy, creativity and strong
+                    visual systems to help brands communicate clearly
+                    and stand out.
+                </p>
+
+                <p>
+                    From brand identity and packaging to social media
+                    content and print design, I enjoy transforming
+                    concepts into visual experiences that people remember.
+                </p>
+
+                <div class="stats">
+
+                    <div class="stat">
+                        <strong>4+</strong>
+                        <span>Years Experience</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>50+</strong>
+                        <span>Projects</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>3</strong>
+                        <span>Languages</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section id="services">
+
+    <div class="container">
+
+        <div class="section-top">
+
+            <div>
+                <div class="section-number">
+                    03 / SERVICES
+                </div>
+
+                <h2 class="section-title">
+                    What I do
+                </h2>
+            </div>
+
+            <p class="section-description">
+                Visual solutions designed to make brands look better,
+                communicate better and connect with their audience.
+            </p>
+
+        </div>
+
+
+        <div class="services">
+
+            <div class="service">
+
+                <div class="service-number">01</div>
+
+                <h3>Brand Identity</h3>
+
+                <p>
+                    Logo design, visual systems, typography, colors,
+                    brand guidelines and complete identity creation.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-number">02</div>
+
+                <h3>Packaging Design</h3>
+
+                <p>
+                    Packaging concepts, labels, product visuals and
+                    realistic presentation mockups.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-number">03</div>
+
+                <h3>Social Media Design</h3>
+
+                <p>
+                    Creative social media posts, campaigns, advertising
+                    visuals and content systems.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-number">04</div>
+
+                <h3>Print & Advertising</h3>
+
+                <p>
+                    Flyers, menus, posters, signage, promotional materials,
+                    vehicle graphics and print-ready artwork.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
+<section id="experience">
+
+    <div class="container">
+
+        <div class="section-number">
+            04 / EXPERIENCE
+        </div>
+
+        <h2 class="section-title">
+            Experience
+        </h2>
+
+
+        <div class="experience">
+
+            <div class="experience-item">
+
+                <div class="experience-date">
+                    2022 — Present
+                </div>
+
+                <div>
+
+                    <h3>
+                        Graphic Designer
+                    </h3>
+
+                    <div class="experience-company">
+                        In-house & Corporate Projects
+                    </div>
+
+                    <p>
+                        Creating brand identities, marketing materials,
+                        digital content, social media visuals, packaging
+                        and print materials for businesses and brands.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="experience-item">
+
+                <div class="experience-date">
+                    Recent
+                </div>
+
+                <div>
+
+                    <h3>
+                        Graphic Designer & Digital Content
+                    </h3>
+
+                    <div class="experience-company">
+                        Visionair
+                    </div>
+
+                    <p>
+                        Visual communication, product promotion,
+                        social media content, e-commerce visuals,
+                        product presentations and digital marketing assets.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="experience-item">
+
+                <div class="experience-date">
+                    Previous
+                </div>
+
+                <div>
+
+                    <h3>
+                        Freelance Graphic Designer
+                    </h3>
+
+                    <div class="experience-company">
+                        Various Brands & Businesses
+                    </div>
+
+                    <p>
+                        Developing visual concepts and communication
+                        materials for different industries including
+                        cosmetics, food, advertising, retail and technology.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     TOOLS
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-number">
+            05 / TOOLS
+        </div>
+
+        <h2 class="section-title">
+            Tools I use
+        </h2>
+
+        <div class="tools-grid">
+
+            <div class="tool">Adobe Illustrator</div>
+            <div class="tool">Adobe Photoshop</div>
+            <div class="tool">Adobe InDesign</div>
+            <div class="tool">Premiere Pro</div>
+            <div class="tool">Adobe Firefly</div>
+            <div class="tool">CapCut</div>
+            <div class="tool">Figma</div>
+            <div class="tool">Behance</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact" class="contact">
+
+    <div class="container">
+
+        <div class="section-number">
+            06 / CONTACT
+        </div>
+
+        <h2>
+            Have a project
+            <br>
+            <span>in mind?</span>
+        </h2>
+
+        <div class="contact-info">
+
+            <a
+                href="mailto:hello@simoallou.com"
+                class="email"
+            >
+                hello@simoallou.com
+            </a>
+
+            <div class="socials">
+
+                <a
+                    href="https://www.behance.net/"
+                    target="_blank"
+                >
+                    Behance
+                </a>
+
+                <a
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                >
+                    Instagram
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/"
+                    target="_blank"
+                >
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container footer-inner">
+
+        <div>
+            © 2026 Simo Allou
+        </div>
+
+        <div>
+            Graphic Designer · Morocco
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
