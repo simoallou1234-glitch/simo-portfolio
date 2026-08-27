@@ -1,2457 +1,2423 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Simo Allou — Graphic Designer & Digital Creative. Portfolio featuring brand identity, packaging, visual communication and digital content.">
+
+<title>Simo Allou — Graphic Designer & Digital Creative</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --bg:#F4F1EA;
+  --ink:#111111;
+  --muted:#716e68;
+  --purple:#6C3BFF;
+  --line:rgba(17,17,17,.16);
+  --dark:#111111;
+  --light:#F4F1EA;
+
+  /* WhatsApp */
+  --whatsapp:#25D366;
+  --whatsapp-dark:#128C7E;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:Inter,Arial,sans-serif;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  max-width:100%;
+}
+
+::selection{
+  background:var(--purple);
+  color:white;
+}
+
+
+/* =========================
+   TOP NAV
+========================= */
+
+.topbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:100;
+  padding:22px 42px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  background:rgba(244,241,234,.82);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+
+  border-bottom:1px solid rgba(17,17,17,.06);
+}
+
+.brand{
+  font-family:Oswald,sans-serif;
+  font-size:19px;
+  letter-spacing:.02em;
+  font-weight:700;
+}
+
+.brand span{
+  color:var(--purple);
+  font-size:26px;
+  line-height:0;
+}
+
+.nav{
+  display:flex;
+  gap:32px;
+  font-size:12px;
+  font-weight:700;
+}
+
+.nav a{
+  transition:.2s;
+}
+
+.nav a:hover{
+  color:var(--purple);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  min-height:100svh;
+  padding:130px 42px 45px;
+
+  display:grid;
+  grid-template-columns:1.02fr .98fr;
+  align-items:center;
+  gap:30px;
+
+  border-bottom:1px solid var(--line);
+  position:relative;
+}
+
+.hero h1{
+  font-family:Oswald,sans-serif;
+  font-size:clamp(80px,13vw,210px);
+  line-height:.83;
+  letter-spacing:-.045em;
+  margin:0;
+  font-weight:700;
+}
+
+.hero h1 .outline{
+  color:transparent;
+  -webkit-text-stroke:1.5px var(--ink);
+}
+
+.hero-role{
+  font-size:clamp(18px,2vw,28px);
+  margin:18px 0 28px;
+  font-weight:500;
+}
+
+.hero-line{
+  width:60px;
+  height:3px;
+  background:var(--purple);
+  margin:0 0 18px;
+}
+
+.hero-copy{
+  font-size:15px;
+  line-height:1.7;
+  max-width:500px;
+  color:#2d2c29;
+}
+
+.scroll{
+  display:inline-block;
+  margin-top:50px;
+  color:var(--purple);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.04em;
+}
+
+
+/* =========================
+   HERO ART
+========================= */
+
+.hero-art{
+  height:min(68vw,660px);
+  min-height:470px;
+
+  position:relative;
+  overflow:hidden;
+
+  border-radius:2px;
+
+  background:
+    radial-gradient(
+      circle at 70% 22%,
+      #fff 0 9%,
+      transparent 25%
+    ),
+    linear-gradient(
+      140deg,
+      #ded8cb 0%,
+      #f7f4ee 47%,
+      #c9c0ae 100%
+    );
+}
+
+.art-shadow{
+  position:absolute;
+  width:70%;
+  height:22%;
+  bottom:4%;
+  left:15%;
+
+  background:rgba(47,31,12,.2);
+  filter:blur(25px);
+  border-radius:50%;
+  transform:rotate(-5deg);
+}
+
+.bottle{
+  position:absolute;
+  bottom:13%;
+  right:20%;
+
+  width:31%;
+  height:58%;
+
+  border-radius:16px 16px 8px 8px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #9d917d,
+      #e4dac8 40%,
+      #b4a894
+    );
+
+  box-shadow:12px 20px 25px rgba(0,0,0,.17);
+
+  z-index:3;
+}
+
+.bottle:before{
+  content:"";
+  position:absolute;
+
+  width:46%;
+  height:24%;
+
+  top:-18%;
+  left:27%;
+
+  border-radius:6px 6px 2px 2px;
+  background:#191919;
+}
+
+.bottle:after{
+  content:"ZYRA\A\A NATURAL SKINCARE\A\A CLEANSING GEL";
+
+  white-space:pre;
+  text-align:center;
+
+  font-family:Georgia,serif;
+  letter-spacing:.08em;
+  line-height:2.1;
+
+  position:absolute;
+  top:26%;
+  left:0;
+
+  width:100%;
+
+  font-size:clamp(8px,1vw,14px);
+}
+
+.jar{
+  position:absolute;
+  bottom:10%;
+  right:42%;
+
+  width:26%;
+  height:26%;
+
+  border-radius:14px 14px 18px 18px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #a79b88,
+      #ece1d0 55%,
+      #a69a89
+    );
 
-  <title>Mohamed Allou — Graphic Designer</title>
+  box-shadow:8px 14px 24px rgba(0,0,0,.17);
 
-  <meta
-    name="description"
-    content="Mohamed Allou is a Moroccan graphic designer specialized in brand identity, packaging, social media design and visual communication."
-  />
+  z-index:4;
+}
 
-  <meta name="author" content="Mohamed Allou" />
+.jar:before{
+  content:"";
+  position:absolute;
+  left:-3%;
+  top:-22%;
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  width:106%;
+  height:25%;
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
+  border-radius:8px;
+  background:#222;
+}
 
-  <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-  />
+.jar:after{
+  content:"ZYRA\A DAY CREAM";
 
-  <style>
+  white-space:pre;
+  text-align:center;
 
-    /* =========================================
-       VARIABLES
-    ========================================= */
+  font-family:Georgia,serif;
+  letter-spacing:.08em;
+  line-height:2.2;
 
-    :root {
-      --bg: #050505;
-      --bg-soft: #0b0b0d;
-      --card: #101012;
-      --card-hover: #15151a;
+  position:absolute;
+  top:34%;
+  width:100%;
 
-      --text: #f5f5f7;
-      --muted: #98989f;
+  font-size:clamp(8px,1vw,13px);
+}
 
-      --line: rgba(255,255,255,0.09);
+.box{
+  position:absolute;
 
-      --purple: #9B5CFF;
-      --purple-light: #b27cff;
+  bottom:15%;
+  right:60%;
 
-      --whatsapp: #25D366;
-      --whatsapp-hover: #20bd5a;
+  width:23%;
+  height:48%;
 
-      --white: #ffffff;
+  background:
+    linear-gradient(
+      120deg,
+      #eee8dc,
+      #c7bda9
+    );
 
-      --max-width: 1240px;
-    }
+  box-shadow:5px 15px 24px rgba(0,0,0,.12);
 
+  z-index:2;
+}
 
-    /* =========================================
-       RESET
-    ========================================= */
+.box:after{
+  content:"ZYRA\A NATURAL SKINCARE";
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  white-space:pre;
+  text-align:center;
 
-    html {
-      scroll-behavior: smooth;
-    }
+  font-family:Georgia,serif;
+  letter-spacing:.1em;
+  line-height:2.2;
+
+  position:absolute;
+  top:13%;
+  width:100%;
+
+  font-size:clamp(8px,1vw,14px);
+}
+
+.leaf{
+  position:absolute;
+  width:2px;
+  height:54%;
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: "DM Sans", sans-serif;
-      overflow-x: hidden;
-    }
+  right:8%;
+  bottom:20%;
+
+  background:#596044;
+
+  transform:rotate(-13deg);
+  transform-origin:bottom;
+}
+
+.leaf:before,
+.leaf:after{
+  content:"";
+
+  position:absolute;
+
+  width:44px;
+  height:120px;
+
+  background:#697050;
+
+  border-radius:100% 0 100% 0;
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+  left:-43px;
+  top:20%;
+
+  transform:rotate(-45deg);
+}
+
+.leaf:after{
+  left:0;
+  top:42%;
+  transform:rotate(30deg);
+  background:#7e8062;
+}
+
+.badge{
+  position:absolute;
+
+  right:42px;
+  bottom:28px;
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
+  width:100px;
+  height:100px;
 
-    button {
-      font: inherit;
-    }
+  border:1px dashed var(--purple);
+  border-radius:50%;
 
+  display:grid;
+  place-items:center;
 
-    /* =========================================
-       GLOBAL
-    ========================================= */
+  color:var(--purple);
+  font-size:50px;
 
-    .container {
-      width: min(92%, var(--max-width));
-      margin: auto;
-    }
+  transform:rotate(-12deg);
+}
 
-    .section {
-      padding: 120px 0;
-      position: relative;
-    }
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
+/* =========================
+   SECTIONS
+========================= */
 
-      color: var(--purple-light);
+.section{
+  padding:85px 42px;
+  border-bottom:1px solid var(--line);
+}
 
-      font-size: 13px;
-      font-weight: 600;
+.kicker{
+  font-size:12px;
+  font-weight:800;
+  color:var(--purple);
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
 
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+.section-head{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  margin-bottom:28px;
+}
 
-      margin-bottom: 20px;
-    }
+.section-title{
+  font-family:Oswald,sans-serif;
+  font-size:clamp(40px,6vw,86px);
+  line-height:.95;
+  margin:7px 0 0;
+}
 
-    .eyebrow::before {
-      content: "";
+.small-meta{
+  font-family:"DM Mono",monospace;
+  font-size:11px;
+  color:var(--muted);
+}
 
-      width: 28px;
-      height: 1px;
 
-      background: var(--purple);
-    }
+/* =========================
+   PROJECTS
+========================= */
 
-    .section-title {
-      font-family: "Space Grotesk", sans-serif;
+.work-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:12px;
+}
 
-      font-size: clamp(42px, 6vw, 78px);
+.work-card{
+  min-width:0;
+  display:block;
+  position:relative;
+}
+
+.work-image{
+  aspect-ratio:.72;
+  overflow:hidden;
+  position:relative;
+
+  margin-bottom:15px;
+
+  background:#ddd;
+
+  transition:
+    transform .45s cubic-bezier(.2,.8,.2,1),
+    box-shadow .45s ease;
+}
+
+.work-card:hover .work-image{
+  transform:translateY(-8px);
+  box-shadow:0 18px 35px rgba(0,0,0,.16);
+}
+
+.work-card:hover .arrow{
+  transform:translate(5px,-5px);
+}
+
+.work-image img{
+  width:100%;
+  height:100%;
+
+  display:block;
+
+  object-fit:cover;
+  object-position:center;
+
+  transition:transform .6s ease;
+}
+
+.work-card:hover .work-image img{
+  transform:scale(1.04);
+}
+
+.work-image:after{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 55%,
+      rgba(0,0,0,.22)
+    );
+
+  pointer-events:none;
+}
+
+.work-image .label{
+  position:absolute;
+  z-index:2;
+
+  bottom:18px;
+  left:18px;
+
+  color:white;
+
+  font-family:Oswald,sans-serif;
+  font-size:30px;
+  letter-spacing:.04em;
+
+  text-shadow:0 2px 15px rgba(0,0,0,.25);
+}
+
+
+/* fallback backgrounds */
+
+.zyra{
+  background:linear-gradient(
+    145deg,
+    #6f7555,
+    #d7d1b9 45%,
+    #2f3526
+  );
+}
+
+.tiziri{
+  background:linear-gradient(
+    145deg,
+    #291b14,
+    #8a6543 45%,
+    #dfd0b6
+  );
+}
+
+.pati{
+  background:linear-gradient(
+    145deg,
+    #f4d8c9,
+    #e79c78 50%,
+    #b65b41
+  );
+}
+
+.blio{
+  background:linear-gradient(
+    145deg,
+    #051d18,
+    #254a39 55%,
+    #a8a86d
+  );
+}
 
-      line-height: 0.98;
+.scent{
+  background:linear-gradient(
+    145deg,
+    #120d0a,
+    #583116 58%,
+    #d59c59
+  );
+}
 
-      letter-spacing: -0.045em;
 
-      max-width: 900px;
-    }
+/* project information */
 
-    .section-title span {
-      color: var(--purple);
-    }
+.work-num{
+  font-family:Oswald,sans-serif;
+  font-size:30px;
+  color:var(--purple);
+  font-weight:700;
+}
 
-    .section-description {
-      color: var(--muted);
+.work-name{
+  font-family:Oswald,sans-serif;
+  font-size:24px;
+  line-height:1;
 
-      max-width: 620px;
+  margin-top:-28px;
+  margin-left:47px;
+}
 
-      font-size: 17px;
+.work-type{
+  font-size:11px;
+  line-height:1.5;
 
-      line-height: 1.7;
+  color:#57534d;
 
-      margin-top: 25px;
-    }
+  margin:
+    9px 0 0 47px;
+}
 
+.arrow{
+  color:var(--purple);
+  font-size:20px;
 
-    /* =========================================
-       NAVIGATION
-    ========================================= */
+  margin:
+    7px 0 0 47px;
 
-    header {
-      position: fixed;
+  transition:.25s;
+}
 
-      top: 0;
-      left: 0;
 
-      width: 100%;
+/* =========================
+   ABOUT
+========================= */
 
-      z-index: 1000;
+.about{
+  display:grid;
+  grid-template-columns:1.1fr 1.6fr .55fr;
 
-      transition: 0.3s ease;
-    }
+  gap:60px;
+  align-items:end;
+}
 
-    header.scrolled {
-      background: rgba(5,5,5,0.78);
+.about-big{
+  font-family:Oswald,sans-serif;
 
-      backdrop-filter: blur(18px);
+  font-size:
+    clamp(
+      54px,
+      7vw,
+      110px
+    );
 
-      border-bottom: 1px solid var(--line);
-    }
+  line-height:.92;
 
-    .nav {
-      height: 82px;
+  margin:0;
+  letter-spacing:-.025em;
+}
 
-      display: flex;
+.about-copy{
+  font-size:15px;
+  line-height:1.8;
+  max-width:620px;
+}
 
-      align-items: center;
+.signature{
+  font-family:cursive;
 
-      justify-content: space-between;
-    }
+  color:var(--purple);
 
-    .logo {
-      font-family: "Space Grotesk", sans-serif;
+  font-size:44px;
 
-      font-size: 23px;
+  transform:rotate(-7deg);
 
-      font-weight: 700;
+  white-space:nowrap;
+}
 
-      letter-spacing: -0.05em;
-    }
 
-    .logo span {
-      color: var(--purple);
-    }
+/* =========================
+   EXPERIENCE / EDUCATION
+========================= */
 
-    .nav-links {
-      display: flex;
+.info-grid{
+  display:grid;
 
-      align-items: center;
+  grid-template-columns:
+    1.1fr
+    1.05fr
+    .85fr;
 
-      gap: 34px;
+  gap:0;
 
-      list-style: none;
-    }
+  padding:0 42px;
 
-    .nav-links a {
-      position: relative;
+  border-bottom:1px solid var(--line);
+}
 
-      color: #d7d7db;
+.info-col{
+  padding:65px 30px 70px 0;
 
-      font-size: 14px;
+  border-right:1px solid var(--line);
 
-      transition: 0.3s ease;
-    }
+  min-height:490px;
+}
 
-    .nav-links a::after {
-      content: "";
+.info-col:not(:first-child){
+  padding-left:30px;
+}
 
-      position: absolute;
+.info-col:last-child{
+  border-right:0;
+}
 
-      left: 0;
-      bottom: -7px;
+.info-title{
+  font-size:12px;
 
-      width: 0;
-      height: 1px;
+  color:var(--purple);
 
-      background: var(--purple);
+  font-weight:800;
 
-      transition: 0.3s ease;
-    }
+  text-transform:uppercase;
 
-    .nav-links a:hover {
-      color: white;
-    }
+  letter-spacing:.06em;
 
-    .nav-links a:hover::after {
-      width: 100%;
-    }
+  margin-bottom:28px;
+}
 
-    .nav-contact {
-      padding: 11px 18px;
+.timeline-item{
+  position:relative;
 
-      border: 1px solid rgba(155,92,255,0.5);
+  padding:
+    0 0 38px 25px;
 
-      border-radius: 999px;
+  border-left:1px solid #b6a6ee;
+}
 
-      color: white !important;
-    }
+.timeline-item:last-child{
+  padding-bottom:0;
+}
 
-    .nav-contact:hover {
-      background: var(--purple);
+.timeline-item:before{
+  content:"";
 
-      border-color: var(--purple);
-    }
+  position:absolute;
 
-    .nav-contact::after {
-      display: none;
-    }
+  width:9px;
+  height:9px;
 
-    .menu-btn {
-      display: none;
+  border-radius:50%;
 
-      background: none;
+  background:var(--purple);
 
-      border: none;
+  left:-5px;
+  top:4px;
+}
 
-      color: white;
+.date,
+.edu-year{
+  font-family:"DM Mono",monospace;
 
-      font-size: 26px;
+  font-size:10px;
 
-      cursor: pointer;
-    }
+  color:var(--muted);
 
+  margin-bottom:7px;
+}
 
-    /* =========================================
-       HERO
-    ========================================= */
+.role,
+.edu-name{
+  font-family:Oswald,sans-serif;
 
-    .hero {
-      min-height: 100vh;
+  font-size:21px;
 
-      display: flex;
+  line-height:1.1;
+}
 
-      align-items: center;
+.edu-name{
+  font-size:20px;
+}
 
-      position: relative;
+.position{
+  font-size:12px;
 
-      overflow: hidden;
+  line-height:1.4;
 
-      padding-top: 100px;
-    }
+  margin:
+    5px 0 10px;
 
-    .hero::before {
-      content: "";
+  font-weight:600;
+}
 
-      position: absolute;
+.points{
+  font-size:11px;
 
-      width: 650px;
-      height: 650px;
+  line-height:1.65;
 
-      background: var(--purple);
+  color:#514e49;
 
-      opacity: 0.08;
+  padding-left:15px;
 
-      filter: blur(150px);
+  margin:0;
+}
 
-      border-radius: 50%;
+.edu-degree{
+  font-size:12px;
 
-      top: -220px;
-      right: -180px;
+  line-height:1.5;
 
-      pointer-events: none;
-    }
+  margin-top:6px;
+}
 
-    .hero::after {
-      content: "";
+.motto{
+  margin-top:55px;
 
-      position: absolute;
+  font-family:Oswald,sans-serif;
 
-      width: 500px;
-      height: 500px;
+  font-size:19px;
 
-      background: #5b2cff;
+  line-height:1.15;
+}
 
-      opacity: 0.045;
 
-      filter: blur(140px);
+/* =========================
+   SKILLS
+========================= */
 
-      border-radius: 50%;
+.skill-group{
+  margin-bottom:30px;
+}
 
-      bottom: -200px;
-      left: -150px;
+.skill-group h4{
+  font-size:10px;
 
-      pointer-events: none;
-    }
+  margin:0 0 12px;
 
-    .hero-grid {
-      display: grid;
+  color:var(--muted);
 
-      grid-template-columns: 1.25fr 0.75fr;
+  letter-spacing:.08em;
+}
 
-      gap: 70px;
+.skill{
+  font-size:11px;
+  margin:9px 0;
+}
 
-      align-items: center;
-    }
+.bar{
+  height:2px;
 
-    .hero-content {
-      position: relative;
+  background:#ddd7cc;
 
-      z-index: 2;
-    }
+  margin-top:5px;
+}
 
-    .hero-title {
-      font-family: "Space Grotesk", sans-serif;
+.bar span{
+  display:block;
 
-      font-size: clamp(58px, 8vw, 112px);
+  height:100%;
 
-      line-height: 0.91;
+  background:var(--purple);
+}
 
-      letter-spacing: -0.065em;
+.software{
+  display:flex;
+  flex-wrap:wrap;
 
-      max-width: 900px;
-    }
+  gap:6px;
 
-    .hero-title .outline {
-      color: transparent;
+  margin-top:14px;
+}
 
-      -webkit-text-stroke: 1px rgba(255,255,255,0.65);
-    }
+.software span{
+  border:1px solid var(--ink);
 
-    .hero-title .purple {
-      color: var(--purple);
-    }
+  padding:4px 7px;
 
-    .hero-description {
-      max-width: 620px;
+  font-size:10px;
+}
 
-      color: var(--muted);
 
-      font-size: 18px;
+/* =========================
+   CONTACT
+========================= */
 
-      line-height: 1.7;
+.contact{
+  background:var(--dark);
 
-      margin-top: 30px;
-    }
+  color:var(--light);
 
-    .hero-buttons {
-      display: flex;
+  padding:80px 42px 25px;
+}
 
-      gap: 14px;
+.contact-grid{
+  display:grid;
 
-      margin-top: 38px;
+  grid-template-columns:
+    1.3fr
+    .7fr
+    1.2fr;
 
-      flex-wrap: wrap;
-    }
+  gap:55px;
 
-    .btn {
-      display: inline-flex;
+  align-items:start;
+}
 
-      align-items: center;
+.contact h2{
+  font-family:Oswald,sans-serif;
 
-      justify-content: center;
+  font-size:
+    clamp(
+      65px,
+      8vw,
+      130px
+    );
 
-      gap: 10px;
+  line-height:.86;
 
-      min-height: 50px;
+  margin:18px 0 0;
+}
 
-      padding: 0 24px;
+.contact h2 span{
+  color:var(--purple);
+}
 
-      border-radius: 999px;
+.available{
+  font-size:11px;
 
-      font-size: 14px;
+  line-height:2;
 
-      font-weight: 600;
+  margin-top:54px;
+}
 
-      transition: 0.3s ease;
-    }
+.available strong{
+  display:block;
 
-    .btn-primary {
-      background: var(--purple);
+  font-size:12px;
 
-      color: white;
+  margin-bottom:6px;
+}
 
-      box-shadow:
-        0 0 35px rgba(155,92,255,0.18);
-    }
+.contact-links .info-title{
+  margin-bottom:18px;
+}
 
-    .btn-primary:hover {
-      background: var(--purple-light);
+.contact-link{
+  display:grid;
 
-      transform: translateY(-3px);
+  grid-template-columns:
+    100px
+    1fr;
 
-      box-shadow:
-        0 0 45px rgba(155,92,255,0.3);
-    }
+  gap:15px;
 
-    .btn-secondary {
-      border: 1px solid var(--line);
+  padding:10px 0;
 
-      color: white;
+  border-bottom:
+    1px solid
+    rgba(255,255,255,.12);
 
-      background: rgba(255,255,255,0.02);
-    }
+  font-size:12px;
+}
 
-    .btn-secondary:hover {
-      border-color: rgba(155,92,255,0.6);
+.contact-link span:first-child{
+  color:#b7aaef;
+  font-weight:700;
+}
 
-      background: rgba(155,92,255,0.07);
+.contact-link:hover{
+  color:#b7aaef;
+}
 
-      transform: translateY(-3px);
-    }
 
+/* =========================
+   WHATSAPP CTA
+========================= */
 
-    /* =========================================
-       PROFILE PHOTO
-    ========================================= */
+.whatsapp-cta{
+  display:inline-flex;
 
-    .hero-profile {
-      display: flex;
+  align-items:center;
+  justify-content:center;
 
-      justify-content: center;
+  gap:12px;
 
-      position: relative;
-    }
+  margin-top:30px;
 
-    .profile-wrapper {
-      width: min(390px, 100%);
+  padding:
+    15px
+    22px;
 
-      position: relative;
-    }
+  background:var(--whatsapp);
 
-    .profile-glow {
-      position: absolute;
+  color:#fff;
 
-      width: 100%;
-      height: 100%;
+  border-radius:999px;
 
-      background: var(--purple);
+  font-size:13px;
 
-      filter: blur(80px);
+  font-weight:800;
 
-      opacity: 0.12;
+  box-shadow:
+    0 10px 25px
+    rgba(37,211,102,.22);
 
-      transform: scale(0.7);
-    }
+  transition:
+    transform .25s ease,
+    background .25s ease,
+    box-shadow .25s ease;
+}
 
-    .profile-frame {
-      position: relative;
+.whatsapp-cta:hover{
+  background:var(--whatsapp-dark);
 
-      width: 100%;
+  transform:translateY(-3px);
 
-      aspect-ratio: 4 / 5;
+  box-shadow:
+    0 15px 30px
+    rgba(37,211,102,.30);
+}
 
-      border-radius: 22px;
+.whatsapp-icon{
+  width:22px;
+  height:22px;
 
-      overflow: hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
 
-      border: 1px solid rgba(255,255,255,0.12);
+.whatsapp-icon svg{
+  width:22px;
+  height:22px;
 
-      background:
-        linear-gradient(
-          145deg,
-          rgba(155,92,255,0.13),
-          rgba(255,255,255,0.02)
-        );
+  fill:white;
+}
 
-      box-shadow:
-        0 30px 100px rgba(0,0,0,0.55);
 
-      display: flex;
+.contact-bottom{
+  border-top:
+    1px solid
+    rgba(255,255,255,.16);
 
-      align-items: center;
+  margin-top:60px;
 
-      justify-content: center;
-    }
+  padding-top:18px;
 
-    /*
-      IMPORTANT:
-      contain prevents the head/body from being cropped.
-    */
+  display:flex;
 
-    .profile-photo {
-      width: 100%;
+  justify-content:space-between;
 
-      height: 100%;
+  font-size:10px;
 
-      object-fit: contain;
+  color:#aaa59b;
+}
 
-      object-position: center center;
 
-      filter: grayscale(100%);
+/* =========================
+   BACK TO TOP
+========================= */
 
-      transition: 0.5s ease;
+.floating{
+  position:fixed;
 
-      padding: 8px;
-    }
+  right:20px;
+  bottom:20px;
 
-    .profile-frame:hover .profile-photo {
-      filter: grayscale(0%);
+  width:42px;
+  height:42px;
 
-      transform: scale(1.02);
-    }
+  border-radius:50%;
 
-    .profile-label {
-      position: absolute;
+  background:var(--purple);
 
-      left: 18px;
-      bottom: 18px;
+  color:white;
 
-      padding: 9px 13px;
+  display:grid;
 
-      border-radius: 8px;
+  place-items:center;
 
-      background: rgba(0,0,0,0.65);
+  opacity:0;
 
-      border: 1px solid rgba(255,255,255,0.1);
+  pointer-events:none;
 
-      backdrop-filter: blur(10px);
+  transition:.25s;
 
-      font-size: 11px;
+  z-index:150;
 
-      letter-spacing: 0.08em;
+  font-size:20px;
+}
 
-      text-transform: uppercase;
-    }
+.floating.show{
+  opacity:1;
+  pointer-events:auto;
+}
 
-    .profile-label span {
-      color: var(--purple-light);
-    }
 
+/* =========================
+   TABLET
+========================= */
 
-    /* =========================================
-       MARQUEE
-    ========================================= */
+@media(max-width:1050px){
 
-    .marquee {
-      border-top: 1px solid var(--line);
+  .work-grid{
+    grid-template-columns:
+      repeat(3,1fr);
+  }
 
-      border-bottom: 1px solid var(--line);
+  .work-card:nth-child(n+4){
+    margin-top:24px;
+  }
 
-      overflow: hidden;
+  .about{
+    grid-template-columns:
+      1fr 1.5fr;
+  }
 
-      white-space: nowrap;
+  .signature{
+    display:none;
+  }
 
-      padding: 21px 0;
+}
 
-      background: #080809;
-    }
 
-    .marquee-track {
-      display: inline-flex;
+/* =========================
+   MOBILE
+========================= */
 
-      align-items: center;
+@media(max-width:760px){
 
-      gap: 40px;
+  .topbar{
+    padding:
+      18px 20px;
 
-      animation: marquee 24s linear infinite;
-    }
+    background:
+      rgba(
+        244,
+        241,
+        234,
+        .94
+      );
 
-    .marquee-item {
-      font-family: "Space Grotesk", sans-serif;
+    backdrop-filter:
+      blur(10px);
+  }
 
-      font-size: 17px;
+  .nav{
+    gap:14px;
+    font-size:10px;
+  }
 
-      font-weight: 600;
+  .nav a:nth-child(3){
+    display:none;
+  }
 
-      text-transform: uppercase;
 
-      letter-spacing: 0.08em;
-    }
+  .hero{
+    padding:
+      105px
+      20px
+      35px;
 
-    .marquee-dot {
-      width: 6px;
-      height: 6px;
+    grid-template-columns:1fr;
 
-      background: var(--purple);
+    min-height:auto;
+  }
 
-      border-radius: 50%;
-    }
+  .hero h1{
+    font-size:
+      clamp(
+        80px,
+        24vw,
+        145px
+      );
+  }
 
-    @keyframes marquee {
+  /*
+     IMPORTANT:
+     Profile/hero image area is no longer
+     cropped because the visual uses
+     contain-style positioning.
+  */
 
-      from {
-        transform: translateX(0);
-      }
+  .hero-art{
+    min-height:420px;
+    height:72vw;
+  }
 
-      to {
-        transform: translateX(-50%);
-      }
+  .badge{
+    right:16px;
+    bottom:16px;
 
-    }
+    width:72px;
+    height:72px;
 
+    font-size:36px;
+  }
 
-    /* =========================================
-       ABOUT
-    ========================================= */
 
-    .about-grid {
-      display: grid;
+  .section{
+    padding:
+      60px
+      20px;
+  }
 
-      grid-template-columns: 0.8fr 1.2fr;
+  .section-head{
+    align-items:flex-start;
+    gap:10px;
+  }
 
-      gap: 90px;
 
-      align-items: start;
-    }
+  .work-grid{
+    grid-template-columns:
+      1fr 1fr;
 
-    .about-number {
-      font-family: "Space Grotesk", sans-serif;
+    gap:
+      22px 10px;
+  }
 
-      font-size: 150px;
+  .work-card:nth-child(n+4){
+    margin-top:0;
+  }
 
-      line-height: 0.8;
+  .work-image{
+    aspect-ratio:
+      .72;
+  }
 
-      color: rgba(255,255,255,0.035);
+  .work-name{
+    font-size:20px;
+    margin:
+      5px 0 0;
+  }
 
-      font-weight: 700;
-    }
+  .work-num{
+    font-size:26px;
+  }
 
-    .about-text {
-      color: #c3c3c8;
+  .work-type{
+    margin-left:0;
+  }
 
-      font-size: 20px;
+  .arrow{
+    margin-left:0;
+  }
 
-      line-height: 1.8;
-    }
 
-    .about-text strong {
-      color: white;
+  .about{
+    grid-template-columns:1fr;
 
-      font-weight: 600;
-    }
+    gap:25px;
+  }
 
-    .about-text .highlight {
-      color: var(--purple-light);
-    }
+  .about-copy{
+    font-size:14px;
+  }
 
-    .stats {
-      display: grid;
 
-      grid-template-columns: repeat(3, 1fr);
+  .info-grid{
+    grid-template-columns:1fr;
 
-      gap: 20px;
+    padding:
+      0 20px;
+  }
 
-      margin-top: 50px;
-    }
+  .info-col,
+  .info-col:not(:first-child){
 
-    .stat {
-      padding: 24px;
+    border-right:0;
 
-      border: 1px solid var(--line);
+    border-bottom:
+      1px solid
+      var(--line);
 
-      border-radius: 14px;
+    padding:
+      48px 0;
 
-      background: rgba(255,255,255,0.015);
-    }
+    min-height:auto;
+  }
 
-    .stat-number {
-      font-family: "Space Grotesk", sans-serif;
+  .info-col:last-child{
+    border-bottom:0;
+  }
 
-      font-size: 35px;
 
-      font-weight: 700;
-    }
+  .contact{
+    padding:
+      60px
+      20px
+      20px;
+  }
 
-    .stat-label {
-      color: var(--muted);
+  .contact-grid{
+    grid-template-columns:1fr;
 
-      font-size: 12px;
+    gap:15px;
+  }
 
-      margin-top: 7px;
-    }
+  .available{
+    margin-top:15px;
+  }
 
+  .contact-bottom{
+    margin-top:40px;
 
-    /* =========================================
-       WORK
-    ========================================= */
+    gap:15px;
 
-    .work-header {
-      display: flex;
+    flex-direction:column;
+  }
 
-      justify-content: space-between;
+  .contact-link{
+    grid-template-columns:
+      82px
+      1fr;
+  }
 
-      align-items: end;
+  .whatsapp-cta{
+    width:100%;
+  }
 
-      gap: 40px;
+}
 
-      margin-bottom: 55px;
-    }
 
-    .work-header .section-description {
-      margin: 0;
+/* =========================
+   VERY SMALL MOBILE
+========================= */
 
-      max-width: 450px;
-    }
+@media(max-width:420px){
 
-    .projects {
-      display: grid;
+  .work-grid{
+    grid-template-columns:1fr;
+  }
 
-      grid-template-columns: repeat(2, 1fr);
+  .work-image{
+    aspect-ratio:
+      1 / 1.15;
+  }
 
-      gap: 24px;
-    }
+  .hero-art{
+    min-height:360px;
+  }
 
-    .project {
-      position: relative;
+}
 
-      overflow: hidden;
-
-      border-radius: 18px;
-
-      border: 1px solid var(--line);
-
-      background: var(--card);
-
-      transition: 0.4s ease;
-    }
-
-    .project:hover {
-      transform: translateY(-7px);
-
-      border-color: rgba(155,92,255,0.4);
-
-      background: var(--card-hover);
-
-      box-shadow:
-        0 25px 80px rgba(0,0,0,0.35);
-    }
-
-    /*
-      FIXED PROJECT COVER:
-      The entire image is visible.
-    */
-
-    .project-image {
-      position: relative;
-
-      aspect-ratio: 16 / 10;
-
-      overflow: hidden;
-
-      background:
-        radial-gradient(
-          circle at center,
-          rgba(155,92,255,0.08),
-          #111 70%
-        );
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-    }
-
-    .project-image img {
-      width: 100%;
-
-      height: 100%;
-
-      object-fit: contain;
-
-      object-position: center;
-
-      transition: 0.6s ease;
-    }
-
-    .project:hover .project-image img {
-      transform: scale(1.035);
-    }
-
-    .project-overlay {
-      position: absolute;
-
-      inset: 0;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      background: rgba(5,5,5,0.2);
-
-      opacity: 0;
-
-      transition: 0.4s ease;
-    }
-
-    .project:hover .project-overlay {
-      opacity: 1;
-    }
-
-    .view-project {
-      width: 58px;
-
-      height: 58px;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      border-radius: 50%;
-
-      background: var(--purple);
-
-      color: white;
-
-      font-size: 20px;
-
-      transform: translateY(15px);
-
-      transition: 0.4s ease;
-    }
-
-    .project:hover .view-project {
-      transform: translateY(0);
-    }
-
-    .project-info {
-      padding: 23px 24px 25px;
-    }
-
-    .project-number {
-      color: var(--purple-light);
-
-      font-size: 11px;
-
-      letter-spacing: 0.12em;
-
-      font-weight: 600;
-    }
-
-    .project-title {
-      font-family: "Space Grotesk", sans-serif;
-
-      font-size: 27px;
-
-      margin-top: 8px;
-
-      letter-spacing: -0.03em;
-    }
-
-    .project-category {
-      color: var(--muted);
-
-      font-size: 13px;
-
-      margin-top: 8px;
-    }
-
-
-    /* =========================================
-       SERVICES
-    ========================================= */
-
-    .services-list {
-      margin-top: 65px;
-
-      border-top: 1px solid var(--line);
-    }
-
-    .service {
-      display: grid;
-
-      grid-template-columns: 100px 1fr 60px;
-
-      align-items: center;
-
-      gap: 30px;
-
-      padding: 32px 0;
-
-      border-bottom: 1px solid var(--line);
-
-      transition: 0.3s ease;
-    }
-
-    .service:hover {
-      padding-left: 15px;
-
-      padding-right: 15px;
-
-      background: rgba(155,92,255,0.025);
-    }
-
-    .service-number {
-      color: var(--purple-light);
-
-      font-size: 13px;
-    }
-
-    .service-name {
-      font-family: "Space Grotesk", sans-serif;
-
-      font-size: clamp(25px, 3vw, 38px);
-
-      letter-spacing: -0.035em;
-    }
-
-    .service-arrow {
-      color: var(--muted);
-
-      font-size: 25px;
-
-      text-align: right;
-
-      transition: 0.3s ease;
-    }
-
-    .service:hover .service-arrow {
-      color: var(--purple);
-
-      transform: translateX(5px);
-    }
-
-
-    /* =========================================
-       CONTACT
-    ========================================= */
-
-    .contact {
-      text-align: center;
-
-      padding-bottom: 150px;
-    }
-
-    .contact .section-title {
-      margin: auto;
-
-      max-width: 1000px;
-    }
-
-    .contact-description {
-      color: var(--muted);
-
-      max-width: 600px;
-
-      margin: 28px auto 0;
-
-      line-height: 1.7;
-
-      font-size: 17px;
-    }
-
-    .contact-button {
-      margin-top: 38px;
-    }
-
-
-    /* =========================================
-       WHATSAPP BUTTON
-    ========================================= */
-
-    .whatsapp-button {
-      background: var(--whatsapp);
-
-      color: #ffffff;
-
-      box-shadow:
-        0 12px 35px rgba(37,211,102,0.16);
-    }
-
-    .whatsapp-button:hover {
-      background: var(--whatsapp-hover);
-
-      transform: translateY(-3px);
-
-      box-shadow:
-        0 16px 45px rgba(37,211,102,0.25);
-    }
-
-    .whatsapp-button i {
-      font-size: 19px;
-    }
-
-
-    /* =========================================
-       SOCIAL LINKS
-    ========================================= */
-
-    .contact-links {
-      display: flex;
-
-      justify-content: center;
-
-      gap: 14px;
-
-      flex-wrap: wrap;
-
-      margin-top: 28px;
-    }
-
-    .social-link {
-      display: inline-flex;
-
-      align-items: center;
-
-      gap: 8px;
-
-      border: 1px solid var(--line);
-
-      border-radius: 999px;
-
-      padding: 10px 17px;
-
-      color: #c7c7cc;
-
-      font-size: 13px;
-
-      transition: 0.3s ease;
-    }
-
-    .social-link:hover {
-      color: white;
-
-      border-color: var(--purple);
-
-      background: rgba(155,92,255,0.08);
-    }
-
-    .social-link i {
-      font-size: 14px;
-    }
-
-
-    /* =========================================
-       FOOTER
-    ========================================= */
-
-    footer {
-      border-top: 1px solid var(--line);
-
-      padding: 28px 0;
-    }
-
-    .footer-content {
-      display: flex;
-
-      align-items: center;
-
-      justify-content: space-between;
-
-      gap: 20px;
-    }
-
-    .footer-logo {
-      font-family: "Space Grotesk", sans-serif;
-
-      font-weight: 700;
-    }
-
-    .footer-logo span {
-      color: var(--purple);
-    }
-
-    .footer-copy {
-      color: #66666c;
-
-      font-size: 12px;
-    }
-
-
-    /* =========================================
-       REVEAL ANIMATION
-    ========================================= */
-
-    .reveal {
-      opacity: 0;
-
-      transform: translateY(35px);
-
-      transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-
-      transform: translateY(0);
-    }
-
-
-    /* =========================================
-       RESPONSIVE
-    ========================================= */
-
-    @media (max-width: 900px) {
-
-      .nav-links {
-        position: absolute;
-
-        top: 82px;
-
-        left: 4%;
-
-        width: 92%;
-
-        display: none;
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        gap: 0;
-
-        padding: 10px;
-
-        background: rgba(12,12,14,0.96);
-
-        backdrop-filter: blur(20px);
-
-        border: 1px solid var(--line);
-
-        border-radius: 16px;
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .nav-links li a {
-        display: block;
-
-        padding: 15px;
-      }
-
-      .nav-contact {
-        text-align: center;
-      }
-
-      .menu-btn {
-        display: block;
-      }
-
-      .hero-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-profile {
-        max-width: 360px;
-
-        justify-self: center;
-      }
-
-      .about-grid {
-        grid-template-columns: 1fr;
-
-        gap: 30px;
-      }
-
-      .about-number {
-        font-size: 100px;
-      }
-
-      .work-header {
-        display: block;
-      }
-
-      .work-header .section-description {
-        margin-top: 25px;
-      }
-
-    }
-
-
-    @media (max-width: 650px) {
-
-      .section {
-        padding: 85px 0;
-      }
-
-      .hero {
-        padding-top: 110px;
-      }
-
-      .hero-title {
-        font-size: clamp(52px, 16vw, 82px);
-      }
-
-      .hero-description {
-        font-size: 16px;
-      }
-
-      .projects {
-        grid-template-columns: 1fr;
-      }
-
-      .stats {
-        grid-template-columns: 1fr;
-      }
-
-      .service {
-        grid-template-columns: 50px 1fr 25px;
-
-        gap: 15px;
-
-        padding: 25px 0;
-      }
-
-      .service-name {
-        font-size: 25px;
-      }
-
-      .footer-content {
-        flex-direction: column;
-
-        text-align: center;
-      }
-
-      .profile-wrapper {
-        width: min(330px, 90vw);
-      }
-
-    }
-
-
-    @media (prefers-reduced-motion: reduce) {
-
-      html {
-        scroll-behavior: auto;
-      }
-
-      *,
-      *::before,
-      *::after {
-        animation-duration: 0.01ms !important;
-
-        animation-iteration-count: 1 !important;
-
-        transition-duration: 0.01ms !important;
-      }
-
-    }
-
-  </style>
+</style>
 </head>
 
 
 <body>
 
+<!-- =========================
+     BACK TO TOP
+========================= -->
 
-  <!-- =========================================
-       NAVIGATION
-  ========================================= -->
-
-  <header id="header">
-
-    <div class="container nav">
-
-      <a href="#home" class="logo">
-        SIMO<span>.</span>
-      </a>
-
-
-      <button
-        class="menu-btn"
-        id="menuBtn"
-        aria-label="Open menu"
-      >
-        ☰
-      </button>
+<a
+  class="floating"
+  href="#top"
+  aria-label="Back to top"
+>
+  ↑
+</a>
 
 
-      <ul class="nav-links" id="navLinks">
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header class="topbar">
+
+  <a
+    class="brand"
+    href="#top"
+  >
+    SIMO ALLOU
+    <span>•</span>
+  </a>
+
+  <nav class="nav">
+
+    <a href="#work">
+      WORK
+    </a>
+
+    <a href="#about">
+      ABOUT
+    </a>
+
+    <a href="#experience">
+      EXPERIENCE
+    </a>
+
+    <a href="#contact">
+      CONTACT
+    </a>
+
+  </nav>
+
+</header>
+
+
+<main id="top">
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+  <div>
+
+    <h1>
+      SIMO<br>
+      ALLOU<span class="outline">.</span>
+    </h1>
+
+    <div class="hero-role">
+      Graphic Designer &amp; Digital Creative
+    </div>
+
+    <div class="hero-line"></div>
+
+    <p class="hero-copy">
+      I am a graphic designer specialized in branding,
+      visual communication and digital content.
+    </p>
+
+    <a
+      class="scroll"
+      href="#work"
+    >
+      SCROLL TO EXPLORE ↓
+    </a>
+
+  </div>
+
+
+  <div
+    class="hero-art"
+    aria-label="Zyra skincare visual"
+  >
+
+    <div class="art-shadow"></div>
+
+    <div class="box"></div>
+
+    <div class="jar"></div>
+
+    <div class="bottle"></div>
+
+    <div class="leaf"></div>
+
+    <div class="badge">
+      ✳
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     SELECTED WORK
+========================= -->
+
+<section
+  class="section"
+  id="work"
+>
+
+  <div class="section-head">
+
+    <div>
+
+      <div class="kicker">
+        Portfolio
+      </div>
+
+      <h2 class="section-title">
+        SELECTED WORK
+      </h2>
+
+    </div>
+
+    <div class="small-meta">
+      2021 — 2026
+    </div>
+
+  </div>
+
+
+  <div class="work-grid">
+
+
+    <!-- =================
+         ZYRA
+    ================== -->
+
+    <a
+      class="work-card"
+      href="https://www.behance.net/gallery/235089919/Zyra-Natural-Skincare-Brand-Identity"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+      <div class="work-image zyra">
+
+        <!--
+          REAL BEHANCE PROJECT:
+          https://www.behance.net/gallery/235089919/Zyra-Natural-Skincare-Brand-Identity
+
+          Put the downloaded Behance cover here:
+          assets/projects/zyra-cover.jpg
+        -->
+
+        <img
+          src="assets/projects/zyra-cover.jpg"
+          alt="ZYRA Natural Skincare Brand Identity"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        >
+
+        <div class="label">
+          ZYRA
+        </div>
+
+      </div>
+
+      <div class="work-num">
+        01
+      </div>
+
+      <div class="work-name">
+        ZYRA
+      </div>
+
+      <div class="work-type">
+        Natural Skincare<br>
+        Brand Identity / Packaging
+      </div>
+
+      <div class="arrow">
+        ↗
+      </div>
+
+    </a>
+
+
+    <!-- =================
+         TIZIRI
+    ================== -->
+
+    <a
+      class="work-card"
+      href="https://www.behance.net/gallery/236343725/Tiziri-Coffee-Moroccan-Specialty-Coffee-Brand-Identity"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+      <div class="work-image tiziri">
+
+        <!--
+          REAL BEHANCE PROJECT:
+          https://www.behance.net/gallery/236343725/Tiziri-Coffee-Moroccan-Specialty-Coffee-Brand-Identity
+
+          Put the downloaded Behance cover here:
+          assets/projects/tiziri-cover.jpg
+        -->
+
+        <img
+          src="assets/projects/tiziri-cover.jpg"
+          alt="Tiziri Coffee Moroccan Specialty Coffee Brand Identity"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        >
+
+        <div class="label">
+          TIZIRI
+        </div>
+
+      </div>
+
+      <div class="work-num">
+        02
+      </div>
+
+      <div class="work-name">
+        TIZIRI COFFEE
+      </div>
+
+      <div class="work-type">
+        Moroccan Specialty Coffee<br>
+        Brand Identity / Packaging
+      </div>
+
+      <div class="arrow">
+        ↗
+      </div>
+
+    </a>
+
+
+    <!-- =================
+         PATI
+    ================== -->
+
+    <a
+      class="work-card"
+      href="https://www.behance.net/gallery/234095455/Pati-Sweet-Cake-Pastry-Shop-Branding"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+      <div class="work-image pati">
+
+        <!--
+          REAL BEHANCE PROJECT:
+          https://www.behance.net/gallery/234095455/Pati-Sweet-Cake-Pastry-Shop-Branding
+
+          Put the downloaded Behance cover here:
+          assets/projects/pati-cover.jpg
+        -->
+
+        <img
+          src="assets/projects/pati-cover.jpg"
+          alt="Pati Sweet Cake and Pastry Shop Branding"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        >
+
+        <div class="label">
+          PATI
+        </div>
+
+      </div>
+
+      <div class="work-num">
+        03
+      </div>
+
+      <div class="work-name">
+        PATI SWEET
+      </div>
+
+      <div class="work-type">
+        Cake &amp; Pastry Shop<br>
+        Branding / Packaging
+      </div>
+
+      <div class="arrow">
+        ↗
+      </div>
+
+    </a>
+
+
+    <!-- =================
+         BLIO
+    ================== -->
+
+    <a
+      class="work-card"
+      href="https://www.behance.net/gallery/226783325/new-project-for-blio-cosmetic"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+      <div class="work-image blio">
+
+        <!--
+          REAL BEHANCE PROJECT:
+          https://www.behance.net/gallery/226783325/new-project-for-blio-cosmetic
+
+          Put the downloaded Behance cover here:
+          assets/projects/blio-cover.jpg
+        -->
+
+        <img
+          src="assets/projects/blio-cover.jpg"
+          alt="Blio Cosmetic Brand Identity"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        >
+
+        <div class="label">
+          BLIO
+        </div>
+
+      </div>
+
+      <div class="work-num">
+        04
+      </div>
+
+      <div class="work-name">
+        BLIO
+      </div>
+
+      <div class="work-type">
+        Cosmetics<br>
+        Branding / Packaging
+      </div>
+
+      <div class="arrow">
+        ↗
+      </div>
+
+    </a>
+
+
+    <!-- =================
+         SCENT
+    ================== -->
+
+    <a
+      class="work-card"
+      href="https://www.behance.net/gallery/218377069/packaging-purfume-and-emballge-product-scent"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+      <div class="work-image scent">
+
+        <!--
+          REAL BEHANCE PROJECT:
+          https://www.behance.net/gallery/218377069/packaging-purfume-and-emballge-product-scent
+
+          Put the downloaded Behance cover here:
+          assets/projects/scent-cover.jpg
+        -->
+
+        <img
+          src="assets/projects/scent-cover.jpg"
+          alt="Scent Perfume Packaging Concept"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        >
+
+        <div class="label">
+          SCENT
+        </div>
+
+      </div>
+
+      <div class="work-num">
+        05
+      </div>
+
+      <div class="work-name">
+        SCENT
+      </div>
+
+      <div class="work-type">
+        Perfume<br>
+        Packaging Concept
+      </div>
+
+      <div class="arrow">
+        ↗
+      </div>
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section
+  class="section"
+  id="about"
+>
+
+  <div class="about">
+
+    <div>
+
+      <div class="kicker">
+        About Me
+      </div>
+
+      <h2 class="about-big">
+
+        DESIGN IS HOW<br>
+        IDEAS BECOME<br>
+        EXPERIENCES
+        <span style="color:var(--purple)">
+          .
+        </span>
+
+      </h2>
+
+    </div>
+
+
+    <div class="about-copy">
+
+      <p>
+        I'm Simo Allou, a Graphic Designer &amp;
+        Digital Creative based in Morocco.
+        I specialize in creating visual identities,
+        branding systems and digital content that
+        help brands communicate clearly and stand out.
+      </p>
+
+      <p>
+        My work combines creativity, visual strategy
+        and attention to detail. From brand identity
+        and packaging to social media and digital
+        communication, I enjoy transforming ideas
+        into distinctive visual experiences.
+      </p>
+
+    </div>
+
+
+    <div class="signature">
+      Simo Allou
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     EXPERIENCE / EDUCATION
+========================= -->
+
+<section
+  class="info-grid"
+  id="experience"
+>
+
+
+  <!-- EXPERIENCE -->
+
+  <div class="info-col">
+
+    <div class="info-title">
+      Experience
+    </div>
+
+
+    <div class="timeline-item">
+
+      <div class="date">
+        04/2026 — 09/2026
+      </div>
+
+      <div class="role">
+        VISIONAIR
+      </div>
+
+      <div class="position">
+        Graphic Designer &amp; Digital Marketing /
+        E-commerce Manager
+      </div>
+
+      <ul class="points">
 
         <li>
-          <a href="#home">
-            Home
-          </a>
+          Graphic design &amp; visual content
         </li>
 
         <li>
-          <a href="#about">
-            About
-          </a>
+          Social media management
         </li>
 
         <li>
-          <a href="#work">
-            Work
-          </a>
+          Product visuals &amp; marketing content
         </li>
 
         <li>
-          <a href="#services">
-            Services
-          </a>
-        </li>
-
-        <li>
-          <a href="#contact" class="nav-contact">
-            Let's Talk
-          </a>
+          E-commerce content and product pages
         </li>
 
       </ul>
 
     </div>
 
-  </header>
 
+    <div class="timeline-item">
 
-  <!-- =========================================
-       HERO
-  ========================================= -->
-
-  <main id="home">
-
-    <section class="hero">
-
-      <div class="container hero-grid">
-
-
-        <div class="hero-content reveal">
-
-          <div class="eyebrow">
-            Graphic Designer
-          </div>
-
-
-          <h1 class="hero-title">
-
-            I create
-
-            <span class="purple">
-              visual
-            </span>
-
-            <br>
-
-            identities
-
-            <span class="outline">
-              that
-            </span>
-
-            <br>
-
-            <span class="outline">
-              stand out.
-            </span>
-
-          </h1>
-
-
-          <p class="hero-description">
-
-            I'm Mohamed Allou, a Moroccan graphic designer focused on
-            brand identity, packaging, social media and visual
-            communication. I turn ideas into visual experiences
-            that people remember.
-
-          </p>
-
-
-          <div class="hero-buttons">
-
-            <a
-              href="#work"
-              class="btn btn-primary"
-            >
-              Explore My Work
-            </a>
-
-
-            <a
-              href="#contact"
-              class="btn btn-secondary"
-            >
-              Let's Work Together
-            </a>
-
-          </div>
-
-        </div>
-
-
-        <!-- PROFILE -->
-
-        <div class="hero-profile reveal">
-
-          <div class="profile-wrapper">
-
-            <div class="profile-glow"></div>
-
-
-            <div class="profile-frame">
-
-              <img
-                src="assets/profile.jpg"
-                alt="Mohamed Allou — Graphic Designer"
-                class="profile-photo"
-              >
-
-
-              <div class="profile-label">
-
-                <span>
-                  Available
-                </span>
-
-                for projects
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
+      <div class="date">
+        10/2025 — 03/2026
       </div>
 
-    </section>
+      <div class="role">
+        POINT SYNERGIE GROUPE
+      </div>
+
+      <div class="position">
+        Graphic Designer
+      </div>
+
+      <ul class="points">
+
+        <li>
+          Visual communication for multiple projects
+        </li>
+
+        <li>
+          Branding, social media, advertising &amp; print
+        </li>
+
+        <li>
+          Promotional and corporate communication
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
 
 
-    <!-- =========================================
-         MARQUEE
-    ========================================= -->
+  <!-- EDUCATION -->
 
-    <div class="marquee">
+  <div class="info-col">
 
-      <div class="marquee-track">
-
-        <span class="marquee-item">
-          Brand Identity
-        </span>
-
-        <span class="marquee-dot"></span>
+    <div class="info-title">
+      Education
+    </div>
 
 
-        <span class="marquee-item">
-          Graphic Design
-        </span>
+    <div class="timeline-item">
 
-        <span class="marquee-dot"></span>
+      <div class="edu-year">
+        2025
+      </div>
 
+      <div class="edu-name">
+        INSTITUT POLYPOLE
+      </div>
 
-        <span class="marquee-item">
-          Packaging
-        </span>
-
-        <span class="marquee-dot"></span>
-
-
-        <span class="marquee-item">
-          Art Direction
-        </span>
-
-        <span class="marquee-dot"></span>
-
-
-        <span class="marquee-item">
-          Social Media
-        </span>
-
-        <span class="marquee-dot"></span>
-
-
-        <span class="marquee-item">
-          Brand Identity
-        </span>
-
-        <span class="marquee-dot"></span>
-
-
-        <span class="marquee-item">
-          Graphic Design
-        </span>
-
-        <span class="marquee-dot"></span>
-
-
-        <span class="marquee-item">
-          Packaging
-        </span>
-
-        <span class="marquee-dot"></span>
-
-
-        <span class="marquee-item">
-          Art Direction
-        </span>
-
-        <span class="marquee-dot"></span>
-
-
-        <span class="marquee-item">
-          Social Media
-        </span>
-
-        <span class="marquee-dot"></span>
-
+      <div class="edu-degree">
+        Graphic Design Diploma<br>
+        6 Months
       </div>
 
     </div>
 
 
-    <!-- =========================================
-         ABOUT
-    ========================================= -->
+    <div class="timeline-item">
 
-    <section class="section" id="about">
-
-      <div class="container">
-
-        <div class="about-grid">
-
-
-          <div class="reveal">
-
-            <div class="eyebrow">
-              About Me
-            </div>
-
-            <div class="about-number">
-              01
-            </div>
-
-          </div>
-
-
-          <div class="reveal">
-
-            <p class="about-text">
-
-              I'm a
-
-              <strong>
-                Graphic Designer
-              </strong>
-
-              with
-
-              <span class="highlight">
-                4 years of professional experience
-              </span>
-
-              creating visual communication for brands and businesses.
-
-              My work combines strategy, creativity and attention to detail
-              to build identities that feel both
-
-              <strong>
-                distinctive
-              </strong>
-
-              and
-
-              <strong>
-                relevant
-              </strong>.
-
-              <br><br>
-
-              From logos and brand systems to packaging, social media
-              campaigns and digital content, I enjoy transforming a
-              simple idea into a strong visual language.
-
-            </p>
-
-
-            <div class="stats">
-
-
-              <div class="stat">
-
-                <div class="stat-number">
-                  04+
-                </div>
-
-                <div class="stat-label">
-                  Years Experience
-                </div>
-
-              </div>
-
-
-              <div class="stat">
-
-                <div class="stat-number">
-                  67+
-                </div>
-
-                <div class="stat-label">
-                  Projects & Clients
-                </div>
-
-              </div>
-
-
-              <div class="stat">
-
-                <div class="stat-number">
-                  ∞
-                </div>
-
-                <div class="stat-label">
-                  Creative Ideas
-                </div>
-
-              </div>
-
-
-            </div>
-
-          </div>
-
-        </div>
-
+      <div class="edu-year">
+        2021 — 2023
       </div>
 
-    </section>
-
-
-    <!-- =========================================
-         WORK
-    ========================================= -->
-
-    <section class="section" id="work">
-
-      <div class="container">
-
-
-        <div class="work-header reveal">
-
-          <div>
-
-            <div class="eyebrow">
-              Selected Work
-            </div>
-
-
-            <h2 class="section-title">
-
-              A selection of
-
-              <span>
-                my work.
-              </span>
-
-            </h2>
-
-          </div>
-
-
-          <p class="section-description">
-
-            A selection of branding, packaging and visual identity
-            projects created for different businesses and creative
-            concepts.
-
-          </p>
-
-        </div>
-
-
-        <div class="projects">
-
-
-          <!-- =====================================
-               PROJECT 01 — TIZIRI
-          ====================================== -->
-
-          <a
-            href="https://www.behance.net/gallery/236343725/Tiziri-Coffee-Moroccan-Specialty-Coffee-Brand-Identity"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="project reveal"
-          >
-
-            <div class="project-image">
-
-              <img
-                src="assets/projects/01-tiziri.jpg"
-                alt="Tiziri Coffee — Moroccan Specialty Coffee Brand Identity"
-                loading="lazy"
-              >
-
-
-              <div class="project-overlay">
-
-                <div class="view-project">
-                  ↗
-                </div>
-
-              </div>
-
-            </div>
-
-
-            <div class="project-info">
-
-              <div class="project-number">
-                01 / 06
-              </div>
-
-
-              <h3 class="project-title">
-                Tiziri Coffee
-              </h3>
-
-
-              <p class="project-category">
-                Brand Identity · Packaging
-              </p>
-
-            </div>
-
-          </a>
-
-
-          <!-- =====================================
-               PROJECT 02 — PATI
-          ====================================== -->
-
-          <a
-            href="https://www.behance.net/gallery/234095455/Pati-Sweet-Cake-Pastry-Shop-Branding"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="project reveal"
-          >
-
-            <div class="project-image">
-
-              <img
-                src="assets/projects/02-pati.jpg"
-                alt="Pati Sweet — Cake & Pastry Shop Branding"
-                loading="lazy"
-              >
-
-
-              <div class="project-overlay">
-
-                <div class="view-project">
-                  ↗
-                </div>
-
-              </div>
-
-            </div>
-
-
-            <div class="project-info">
-
-              <div class="project-number">
-                02 / 06
-              </div>
-
-
-              <h3 class="project-title">
-                Pati Sweet
-              </h3>
-
-
-              <p class="project-category">
-                Brand Identity · Packaging
-              </p>
-
-            </div>
-
-          </a>
-
-
-          <!-- =====================================
-               PROJECT 03 — BLIO
-          ====================================== -->
-
-          <a
-            href="https://www.behance.net/gallery/226783325/new-project-for-blio-cosmetic"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="project reveal"
-          >
-
-            <div class="project-image">
-
-              <img
-                src="assets/projects/03-blio.jpg"
-                alt="Blio Cosmetic — Brand Identity"
-                loading="lazy"
-              >
-
-
-              <div class="project-overlay">
-
-                <div class="view-project">
-                  ↗
-                </div>
-
-              </div>
-
-            </div>
-
-
-            <div class="project-info">
-
-              <div class="project-number">
-                03 / 06
-              </div>
-
-
-              <h3 class="project-title">
-                Blio Cosmetic
-              </h3>
-
-
-              <p class="project-category">
-                Cosmetic Branding · Visual Identity
-              </p>
-
-            </div>
-
-          </a>
-
-
-          <!-- =====================================
-               PROJECT 04
-          ====================================== -->
-
-          <a
-            href="https://www.behance.net/simotamdawi"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="project reveal"
-          >
-
-            <div class="project-image">
-
-              <img
-                src="assets/projects/04-dr-mohamed.jpg"
-                alt="Dr. Mohamed Al Rage — Visual Identity"
-                loading="lazy"
-              >
-
-
-              <div class="project-overlay">
-
-                <div class="view-project">
-                  ↗
-                </div>
-
-              </div>
-
-            </div>
-
-
-            <div class="project-info">
-
-              <div class="project-number">
-                04 / 06
-              </div>
-
-
-              <h3 class="project-title">
-                Dr. Mohamed Al Rage
-              </h3>
-
-
-              <p class="project-category">
-                Visual Identity · Art Direction
-              </p>
-
-            </div>
-
-          </a>
-
-
-          <!-- =====================================
-               PROJECT 05
-          ====================================== -->
-
-          <a
-            href="https://www.behance.net/simotamdawi"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="project reveal"
-          >
-
-            <div class="project-image">
-
-              <img
-                src="assets/projects/05-brewt.jpg"
-                alt="BREWT — Coffee Brand Identity"
-                loading="lazy"
-              >
-
-
-              <div class="project-overlay">
-
-                <div class="view-project">
-                  ↗
-                </div>
-
-              </div>
-
-            </div>
-
-
-            <div class="project-info">
-
-              <div class="project-number">
-                05 / 06
-              </div>
-
-
-              <h3 class="project-title">
-                BREWT
-              </h3>
-
-
-              <p class="project-category">
-                Coffee Branding · Packaging
-              </p>
-
-            </div>
-
-          </a>
-
-
-          <!-- =====================================
-               PROJECT 06
-          ====================================== -->
-
-          <a
-            href="https://www.behance.net/simotamdawi"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="project reveal"
-          >
-
-            <div class="project-image">
-
-              <img
-                src="assets/projects/06-zyra.jpg"
-                alt="Zyra — Skincare Branding"
-                loading="lazy"
-              >
-
-
-              <div class="project-overlay">
-
-                <div class="view-project">
-                  ↗
-                </div>
-
-              </div>
-
-            </div>
-
-
-            <div class="project-info">
-
-              <div class="project-number">
-                06 / 06
-              </div>
-
-
-              <h3 class="project-title">
-                Zyra
-              </h3>
-
-
-              <p class="project-category">
-                Skincare · Brand Identity
-              </p>
-
-            </div>
-
-          </a>
-
-
-        </div>
-
+      <div class="edu-name">
+        CENTRE MIXTE DE FORMATION PROFESSIONNELLE
+        (MY WAY)
       </div>
 
-    </section>
-
-
-    <!-- =========================================
-         SERVICES
-    ========================================= -->
-
-    <section class="section" id="services">
-
-      <div class="container">
-
-
-        <div class="reveal">
-
-          <div class="eyebrow">
-            What I Do
-          </div>
-
-
-          <h2 class="section-title">
-
-            Design that gives
-
-            <span>
-              brands a voice.
-            </span>
-
-          </h2>
-
-        </div>
-
-
-        <div class="services-list">
-
-
-          <div class="service reveal">
-
-            <div class="service-number">
-              01
-            </div>
-
-            <div class="service-name">
-              Brand Identity
-            </div>
-
-            <div class="service-arrow">
-              ↗
-            </div>
-
-          </div>
-
-
-          <div class="service reveal">
-
-            <div class="service-number">
-              02
-            </div>
-
-            <div class="service-name">
-              Logo Design
-            </div>
-
-            <div class="service-arrow">
-              ↗
-            </div>
-
-          </div>
-
-
-          <div class="service reveal">
-
-            <div class="service-number">
-              03
-            </div>
-
-            <div class="service-name">
-              Packaging Design
-            </div>
-
-            <div class="service-arrow">
-              ↗
-            </div>
-
-          </div>
-
-
-          <div class="service reveal">
-
-            <div class="service-number">
-              04
-            </div>
-
-            <div class="service-name">
-              Social Media Design
-            </div>
-
-            <div class="service-arrow">
-              ↗
-            </div>
-
-          </div>
-
-
-          <div class="service reveal">
-
-            <div class="service-number">
-              05
-            </div>
-
-            <div class="service-name">
-              Art Direction
-            </div>
-
-            <div class="service-arrow">
-              ↗
-            </div>
-
-          </div>
-
-
-          <div class="service reveal">
-
-            <div class="service-number">
-              06
-            </div>
-
-            <div class="service-name">
-              Visual Communication
-            </div>
-
-            <div class="service-arrow">
-              ↗
-            </div>
-
-          </div>
-
-
-        </div>
-
+      <div class="edu-degree">
+        Diploma in Infographie
       </div>
-
-    </section>
-
-
-    <!-- =========================================
-         CONTACT
-    ========================================= -->
-
-    <section
-      class="section contact"
-      id="contact"
-    >
-
-      <div class="container">
-
-
-        <div class="eyebrow reveal">
-          Let's Work Together
-        </div>
-
-
-        <h2 class="section-title reveal">
-
-          Have a project
-
-          <span>
-            in mind?
-          </span>
-
-        </h2>
-
-
-        <p class="contact-description reveal">
-
-          Whether you're launching a new brand, refreshing an existing
-          identity or looking for creative visual content, let's create
-          something memorable together.
-
-        </p>
-
-
-        <!-- WHATSAPP -->
-
-        <div class="contact-button reveal">
-
-          <a
-            href="https://wa.me/212714771013"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn whatsapp-button"
-          >
-
-            <i class="fa-brands fa-whatsapp"></i>
-
-            Message Simo on WhatsApp
-
-          </a>
-
-        </div>
-
-
-        <!-- SOCIAL LINKS -->
-
-        <div class="contact-links reveal">
-
-
-          <a
-            href="https://www.behance.net/simotamdawi"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="social-link"
-          >
-
-            <i class="fa-brands fa-behance"></i>
-
-            Behance
-
-          </a>
-
-
-          <a
-            href="https://www.instagram.com/simo_design12/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="social-link"
-          >
-
-            <i class="fa-brands fa-instagram"></i>
-
-            Instagram
-
-          </a>
-
-
-          <a
-            href="https://www.linkedin.com/in/mohamed-allou-088a9a282/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="social-link"
-          >
-
-            <i class="fa-brands fa-linkedin-in"></i>
-
-            LinkedIn
-
-          </a>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- =========================================
-       FOOTER
-  ========================================= -->
-
-  <footer>
-
-    <div class="container footer-content">
-
-
-      <div class="footer-logo">
-        SIMO<span>.</span>
-      </div>
-
-
-      <div class="footer-copy">
-        © 2026 Mohamed Allou. All rights reserved.
-      </div>
-
-
-      <div class="footer-copy">
-        Graphic Designer · Morocco
-      </div>
-
 
     </div>
 
-  </footer>
+
+    <div class="motto">
+
+      <span
+        style="
+          color:var(--purple);
+          font-size:36px;
+          vertical-align:middle
+        "
+      >
+        ✳
+      </span>
+
+      <br>
+
+      ALWAYS LEARNING<br>
+      ALWAYS CREATING<br>
+      ALWAYS IMPROVING
+
+    </div>
+
+  </div>
 
 
-  <!-- =========================================
-       JAVASCRIPT
-  ========================================= -->
+  <!-- SKILLS -->
 
-  <script>
+  <div class="info-col">
 
-
-    /* =========================================
-       HEADER ON SCROLL
-    ========================================= */
-
-    const header =
-      document.getElementById("header");
+    <div class="info-title">
+      Skills
+    </div>
 
 
-    window.addEventListener("scroll", () => {
+    <div class="skill-group">
 
-      if (window.scrollY > 40) {
+      <h4>
+        DESIGN
+      </h4>
 
-        header.classList.add("scrolled");
+      <div class="skill">
+        Brand Identity
+        <div class="bar">
+          <span style="width:86%"></span>
+        </div>
+      </div>
 
-      } else {
+      <div class="skill">
+        Packaging Design
+        <div class="bar">
+          <span style="width:92%"></span>
+        </div>
+      </div>
 
-        header.classList.remove("scrolled");
+      <div class="skill">
+        Visual Communication
+        <div class="bar">
+          <span style="width:78%"></span>
+        </div>
+      </div>
 
-      }
+      <div class="skill">
+        Print Design
+        <div class="bar">
+          <span style="width:64%"></span>
+        </div>
+      </div>
 
-    });
-
-
-    /* =========================================
-       MOBILE MENU
-    ========================================= */
-
-    const menuBtn =
-      document.getElementById("menuBtn");
-
-    const navLinks =
-      document.getElementById("navLinks");
-
-
-    menuBtn.addEventListener("click", () => {
-
-      navLinks.classList.toggle("active");
-
-
-      menuBtn.textContent =
-        navLinks.classList.contains("active")
-          ? "×"
-          : "☰";
-
-    });
+    </div>
 
 
-    document
-      .querySelectorAll(".nav-links a")
-      .forEach(link => {
+    <div class="skill-group">
 
-        link.addEventListener("click", () => {
+      <h4>
+        DIGITAL
+      </h4>
 
-          navLinks.classList.remove("active");
+      <div class="skill">
+        Digital Content
+        <div class="bar">
+          <span style="width:85%"></span>
+        </div>
+      </div>
 
-          menuBtn.textContent = "☰";
+      <div class="skill">
+        Social Media Content
+        <div class="bar">
+          <span style="width:72%"></span>
+        </div>
+      </div>
 
-        });
+      <div class="skill">
+        Video Editing
+        <div class="bar">
+          <span style="width:68%"></span>
+        </div>
+      </div>
 
-      });
-
-
-    /* =========================================
-       REVEAL ANIMATION
-    ========================================= */
-
-    const revealElements =
-      document.querySelectorAll(".reveal");
+    </div>
 
 
-    const observer =
-      new IntersectionObserver(
-        (entries) => {
+    <div class="skill-group">
 
-          entries.forEach(entry => {
+      <h4>
+        SOFTWARE
+      </h4>
 
-            if (entry.isIntersecting) {
+      <div class="software">
 
-              entry.target.classList.add("visible");
+        <span>AI</span>
+        <span>PS</span>
+        <span>ID</span>
+        <span>PR</span>
+        <span>AE</span>
+        <span>FIREFLY</span>
+        <span>CAPCUT</span>
 
-              observer.unobserve(entry.target);
+      </div>
 
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section
+  class="contact"
+  id="contact"
+>
+
+  <div class="contact-grid">
+
+
+    <div>
+
+      <div
+        class="kicker"
+        style="color:#b7aaef"
+      >
+        Have an idea?
+      </div>
+
+      <h2>
+
+        LET'S MAKE<br>
+        SOMETHING<br>
+        GREAT<span>.</span>
+
+      </h2>
+
+
+      <!-- WHATSAPP BUTTON -->
+
+      <a
+        class="whatsapp-cta"
+        href="https://wa.me/212714771013?text=Hello%20Simo%2C%20I%20visited%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project."
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Start a conversation on WhatsApp"
+      >
+
+        <span class="whatsapp-icon">
+
+          <svg
+            viewBox="0 0 32 32"
+            aria-hidden="true"
+          >
+
+            <path d="
+              M19.11 17.19
+              c-.27-.14-1.6-.79-1.85-.88
+              -.25-.09-.43-.14-.61.14
+              -.18.27-.7.88-.86 1.06
+              -.16.18-.32.2-.59.07
+              -.27-.14-1.13-.42-2.15-1.34
+              -.79-.7-1.33-1.57-1.49-1.83
+              -.16-.27-.02-.41.12-.54
+              .12-.12.27-.32.41-.48
+              .14-.16.18-.27.27-.45
+              .09-.18.05-.34-.02-.48
+              -.07-.14-.61-1.47-.84-2.02
+              -.22-.53-.45-.46-.61-.47
+              -.16-.01-.34-.01-.52-.01
+              -.18 0-.48.07-.73.34
+              -.25.27-.95.93-.95 2.27
+              0 1.34.98 2.63 1.11 2.81
+              .14.18 1.93 2.95 4.68 4.14
+              .65.28 1.16.45 1.55.57
+              .65.21 1.24.18 1.7.11
+              .52-.08 1.6-.65 1.82-1.27
+              .23-.63.23-1.16.16-1.27
+              -.07-.11-.25-.18-.52-.32z
+
+              M16.02 3
+              C8.84 3 3 8.84 3 16.02
+              c0 2.29.6 4.44 1.65 6.31L3 29
+              l6.85-1.79a12.95 12.95 0 0 0
+              6.17 1.56h.01
+              C23.16 28.77 29 22.93 29 15.75
+              29 8.75 23.16 3 16.02 3z
+
+              M16.02 26.5
+              c-1.98 0-3.92-.53-5.62-1.53
+              l-.4-.24-4.07 1.06
+              1.09-3.97-.26-.41
+              a10.48 10.48 0 0 1-1.61-5.59
+              c0-5.82 4.74-10.56 10.57-10.56
+              5.82 0 10.56 4.74 10.56 10.56
+              0 5.83-4.74 10.68-10.56 10.68z
+            "/>
+
+          </svg>
+
+        </span>
+
+        START CONVERSATION
+
+      </a>
+
+    </div>
+
+
+    <div class="available">
+
+      <strong>
+        I'M AVAILABLE FOR
+      </strong>
+
+      • Brand Identity<br>
+      • Packaging Design<br>
+      • Digital Content<br>
+      • Visual Communication<br>
+      • Social Media
+
+    </div>
+
+
+    <div class="contact-links">
+
+      <div
+        class="info-title"
+        style="color:#b7aaef"
+      >
+        Let's Connect
+      </div>
+
+
+      <a
+        class="contact-link"
+        href="https://www.behance.net/simotamdawi"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <span>
+          BEHANCE
+        </span>
+
+        <span>
+          behance.net/simotamdawi
+        </span>
+
+      </a>
+
+
+      <a
+        class="contact-link"
+        href="https://www.linkedin.com/in/mohamed-allou-088a9a282/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <span>
+          LINKEDIN
+        </span>
+
+        <span>
+          Mohamed Allou
+        </span>
+
+      </a>
+
+
+      <a
+        class="contact-link"
+        href="https://www.instagram.com/simo_design12"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <span>
+          INSTAGRAM
+        </span>
+
+        <span>
+          @simo_design12
+        </span>
+
+      </a>
+
+
+      <a
+        class="contact-link"
+        href="https://wa.me/212714771013"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <span>
+          WHATSAPP
+        </span>
+
+        <span>
+          +212 7 14 77 10 13
+        </span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="contact-bottom">
+
+    <span>
+      © 2026 SIMO ALLOU. ALL RIGHTS RESERVED.
+    </span>
+
+    <span>
+      DESIGNED &amp; BUILT WITH PASSION
+    </span>
+
+    <a href="#top">
+      BACK TO TOP ↑
+    </a>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<script>
+
+/* =========================
+   BACK TO TOP BUTTON
+========================= */
+
+const topButton =
+  document.querySelector('.floating');
+
+window.addEventListener(
+  'scroll',
+  () => {
+
+    topButton.classList.toggle(
+      'show',
+      window.scrollY > 500
+    );
+
+  }
+);
+
+
+/* =========================
+   SCROLL ANIMATIONS
+========================= */
+
+const observer =
+  new IntersectionObserver(
+    entries => {
+
+      entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+          entry.target.animate(
+
+            [
+              {
+                opacity:0,
+                transform:'translateY(24px)'
+              },
+
+              {
+                opacity:1,
+                transform:'translateY(0)'
+              }
+
+            ],
+
+            {
+              duration:650,
+              easing:'cubic-bezier(.2,.8,.2,1)',
+              fill:'both'
             }
 
-          });
+          );
 
-        },
-        {
-          threshold: 0.12
+          observer.unobserve(
+            entry.target
+          );
+
         }
-      );
-
-
-    revealElements.forEach(element => {
-
-      observer.observe(element);
-
-    });
-
-
-    /* =========================================
-       IMAGE ERROR HANDLING
-    ========================================= */
-
-    document
-      .querySelectorAll(".project-image img")
-      .forEach(img => {
-
-        img.addEventListener("error", () => {
-
-          img.style.display = "none";
-
-          const parent =
-            img.parentElement;
-
-          parent.style.background =
-            "linear-gradient(135deg, #111 0%, #24134a 100%)";
-
-        });
 
       });
 
+    },
+    {
+      threshold:.12
+    }
+  );
 
-  </script>
+
+document
+  .querySelectorAll(
+    '.work-card,.info-col,.about-copy,.about-big'
+  )
+  .forEach(
+    element => observer.observe(element)
+  );
+
+
+/* =========================
+   IMAGE FALLBACK
+========================= */
+
+document
+  .querySelectorAll('.work-image img')
+  .forEach(image => {
+
+    image.addEventListener(
+      'error',
+      () => {
+
+        image.style.display = 'none';
+
+      }
+    );
+
+  });
+
+</script>
 
 </body>
 </html>
+```
